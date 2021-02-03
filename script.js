@@ -3,6 +3,7 @@ const play = document.getElementById('play');
 const stop = document.getElementById('stop');
 const progress = document.getElementById('progress');
 const timestamp = document.getElementById('timestamp');
+const volume = document.getElementById('volume');
 
 function toggleVideoStatus() {
   if (video.paused) {
@@ -46,6 +47,10 @@ function stopVideo() {
   video.pause();
 }
 
+function setVolume() {
+  video.volume = this.value;
+}
+
 // Event listeners
 video.addEventListener('click', toggleVideoStatus);
 video.addEventListener('pause', updatePlayIcon);
@@ -57,3 +62,5 @@ play.addEventListener('click', toggleVideoStatus);
 stop.addEventListener('click', stopVideo);
 
 progress.addEventListener('change', setVideoProgress);
+
+volume.addEventListener('mousemove', setVolume);

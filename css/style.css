@@ -67,6 +67,19 @@ h1 {
   outline: 0;
 }
 
+.ranges {
+  display: flex;
+  width: 100%;
+}
+
+#progress {
+  flex: 3;
+}
+
+#volume {
+  flex: 1;
+}
+
 @media (max-width: 800px) {
   .screen,
   .controls {
